@@ -1,0 +1,257 @@
+@font-face {
+    font-family: roboto;
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+/* Css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "roboto";
+}
+
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utilities Classes */
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: inline-block;
+}
+
+/* variables */
+
+:root {
+
+    /* primary colors */
+    --Tomato: hsl(4, 100%, 67%);
+
+    /* neutral colors */
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Main Css */
+
+html {
+    font-size: 10px;
+    overflow: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--Charcoal-Grey);
+}
+
+.hero-container {
+    overflow: hidden;
+    width: 600px;
+    padding: 1.5em;
+    border-radius: 20px;
+    background: white;
+    align-items: center;
+    box-shadow: 0 3px 35px 0px #252323;
+
+    .hero-about {
+        flex-direction: column;
+        width: 60%;
+        padding: 2.7rem;
+
+        h1 {
+            font-size: 3.9rem;
+            color: var(--Dark-Slate-Grey);
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-block: 1.4rem;
+        }
+
+        ul {
+            li {
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.2rem;
+                margin-bottom: .4rem;
+
+                img {
+                    width: 15px;
+                }
+            }
+        }
+
+        form {
+            p {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+input {
+    width: 100%;
+    padding-block: 1rem;
+    padding-left: 1rem;
+    border-radius: 6px;
+    border: 1px solid rgb(190, 189, 189);
+    font-size: 1.2rem;
+}
+
+input[type="submit"] {
+    border: none;
+    background: var(--Dark-Slate-Grey);
+    color: white;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: all .5s linear;
+
+    &:hover {
+        background: linear-gradient(40deg, #FE576C, #FE934A);
+    }
+}
+
+.hero-image-container {
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        display: block;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+}
+
+.hero-success {
+    width: 350px;
+    background: white;
+    padding: 3.2rem 2.8rem;
+    border-radius: 20px;
+    color: var(--Charcoal-Grey);
+    position: relative;
+
+    img {
+        width: 40px;
+        margin-bottom: 1.4rem;
+    }
+
+    span {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 4rem;
+        line-height: 40px;
+        margin-block: 1rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+
+/* ========== media queries ========== */
+
+
+/* large devices */
+
+@media (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        width: 370px;
+        padding: 0;
+    }
+
+    .hero-about {
+        width: 100% !important;
+    }
+
+    .hero-image-container {
+        width: 100%;
+
+        img {
+            &:nth-child(1) {
+                display: none;
+            }
+
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}
+
+/* small devices */
+
+@media (max-width: 300px) {
+    html {
+        font-size: 8px;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        width: 300px;
+    }
+
+    .hero-success {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+
+        img{
+            margin-top: 9rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+        input[type="submit"] {
+            position: absolute;
+            left: 14px;
+            bottom: 24px;
+            width: 90%;
+            padding-block: 1.6rem;
+        }
+
+    }
+
+}
