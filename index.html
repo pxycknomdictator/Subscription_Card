@@ -12,52 +12,57 @@
 <body>
     <main class="flex">
 
-         <!-- <section class="hero-container flex ">
+        <div id="first">
+            <section id="container" class="hero-container flex">
 
-            <div class="hero-about flex">
-                <h1>Stay updated!</h1>
-                <p>Join 60,000+ product managers receiving monthly updates on:</p>
-                <ul>
-                    <li class="flex">
-                        <img src="./assets/images/icon-list.svg" alt="">
-                        Product discovery and building what matters
-                    </li>
-                    <li class="flex">
-                        <img src="./assets/images/icon-list.svg" alt="">
-                        Measuring to ensure updates are a success
-                    </li>
-                    <li class="flex">
-                        <img src="./assets/images/icon-list.svg" alt="">
-                        And much more!
-                    </li>
-                </ul>
+                <div class="hero-about flex">
+                    <h1>Stay updated!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                    <ul>
+                        <li class="flex">
+                            <img src="./assets/images/icon-list.svg" alt="">
+                            Product discovery and building what matters
+                        </li>
+                        <li class="flex">
+                            <img src="./assets/images/icon-list.svg" alt="">
+                            Measuring to ensure updates are a success
+                        </li>
+                        <li class="flex">
+                            <img src="./assets/images/icon-list.svg" alt="">
+                            And much more!
+                        </li>
+                    </ul>
+                    <form action="#">
+                        <p>Email address</p>
+                        <div>
+                            <input type="email" placeholder="email@company.com" id="mail">
+                            <input type="submit" value="Subscribe to monthly newsletter" id="submit">
+                        </div>
+                        <p id="result"></p>
+                    </form>
+                </div>
+
+                <div class="hero-image-container flex">
+                    <img src="./assets/images/illustration-sign-up-desktop.svg" alt="">
+                    <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+                </div>
+
+            </section>
+        </div>
+
+        <div id="second" class="hidden">
+            <section id="success" class="hero-success">
+                <img src="./assets/images/icon-list.svg" class="block" alt="">
+                <h1>Thanks for Subscribing!</h1>
+                <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>
+                    Please open it and click the button inside to confirm your subscription.</p>
                 <form action="#">
-                    <p>Email address</p>
-                    <div>
-                        <input type="email" placeholder="email@company.com" required>
-                        <input type="submit" value="Subscribe to monthly newsletter">
-                    </div>
+                    <input type="submit" value="Dismiss message" id="return">
                 </form>
-            </div>
+            </section>
+        </div>
 
-            <div class="hero-image-container flex">
-                <img src="./assets/images/illustration-sign-up-desktop.svg" alt="">
-                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
-            </div>
-
-        </section> 
-
-        <section class="hero-success">
-            <img src="./assets/images/icon-list.svg" class="block" alt="">
-            <h1>Thanks for Subscribing!</h1>
-            <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>
-                Please open it and click the button inside to confirm your subscription.</p>
-                <form action="#">
-                    <input type="submit" value="Dismiss message">
-                </form>
-        </section> -->
-
-
+        <script src="./Js/script.js"></script>
     </main>
 </body>
 

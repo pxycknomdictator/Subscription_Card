@@ -34,8 +34,13 @@ a {
     display: flex;
 }
 
-.block {
-    display: inline-block;
+
+.preview{
+    display: block;
+}
+
+.hidden{
+    display: none;
 }
 
 /* variables */
@@ -69,6 +74,7 @@ main {
 
 .hero-container {
     overflow: hidden;
+    display: flex !important;
     width: 600px;
     padding: 1.5em;
     border-radius: 20px;
@@ -103,6 +109,11 @@ main {
                     width: 15px;
                 }
             }
+        }
+
+        #result{
+            text-align: center;
+            font-size: 1.8rem;
         }
 
         form {
@@ -221,9 +232,9 @@ input[type="submit"] {
 
 /* small devices */
 
-@media (max-width: 300px) {
+@media (max-width: 390px) {
     html {
-        font-size: 8px;
+        font-size: 9px;
         overflow: hidden;
     }
 
@@ -233,7 +244,7 @@ input[type="submit"] {
 
     .hero-success {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         border-radius: 0;
 
         img{
