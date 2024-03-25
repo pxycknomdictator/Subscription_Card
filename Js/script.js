@@ -5,7 +5,8 @@ const cardBox = document.querySelector("#second");
 const returnBack = document.querySelector("#return");
 const displayMessage = document.querySelector("#result")
 
-sumbitButton.addEventListener("click", () => {
+sumbitButton.addEventListener("click", (event) => {
+    event.preventDefault();
     if (email.value === "") {
         displayMessage.innerHTML = "Please Input your email address"
     } else {
